@@ -13,18 +13,16 @@ class _LoginPageState extends State<LoginPage> {
   bool changeButton = false;
   final _formkey = GlobalKey<FormState>();
   moveToHome(BuildContext context) async {
-    if(_formkey.currentState!.validate()){
-
-    
-    setState(() {
-      changeButton = true;
-    });
-    await Future.delayed(Duration(seconds: 1));
-    await Navigator.pushNamed(context, MyRoutes.homeRoute);
-    setState(() {
-      changeButton = false;
-    });
-  }
+    if (_formkey.currentState!.validate()) {
+      setState(() {
+        changeButton = true;
+      });
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      setState(() {
+        changeButton = false;
+      });
+    }
   }
 
   @override
@@ -66,8 +64,9 @@ class _LoginPageState extends State<LoginPage> {
                     validator: (value) {
                       if (value!.isEmpty) {
                         return "UserName cannot be empty ";
+                      } else {
+                        return null;
                       }
-                      return null;
                     },
                     onChanged: (value) {
                       name = value;
@@ -85,8 +84,9 @@ class _LoginPageState extends State<LoginPage> {
                         return "UserName cannot be empty ";
                       } else if (value.length < 6) {
                         return "password length should be atleast 8 charactor  ";
+                      } else {
+                        return null;
                       }
-                      return null;
                     },
                   ),
                   const SizedBox(

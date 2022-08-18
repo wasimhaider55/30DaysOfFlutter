@@ -33,7 +33,7 @@ final products = [
   Item(
     id: 001,
     name: "iphone 12 pro",
-    desc: "Apple iphone 12 generartion",
+    desc: "Apple iphone 12th generartion",
     price: 999,
     color: "33505a",
     image:

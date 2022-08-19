@@ -1,15 +1,7 @@
+import 'package:flutter/cupertino.dart';
+
 class CatalogModel {
-  static final items = [
-    Item(
-      id: 001,
-      name: "iphone 12 pro",
-      desc: "Apple iphone 12 generartion",
-      price: 999,
-      color: "33505a",
-      image:
-          "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1617135051000",
-    )
-  ];
+  static List<Item> items = [];
 }
 
 class Item {
@@ -27,6 +19,28 @@ class Item {
       required this.price,
       required this.color,
       required this.image});
+
+       factory Item.fromMap(Map<String,dynamic>map) {
+
+       return  Item(
+          id: map["id"],
+          name: map["name"],
+          desc: map["desc"],
+          price: map["price"],
+          color: map["color"],
+          image: map["image"],
+
+        );
+    }
+    toMap() => {
+      "id" : id,
+      "name" : name,
+      "desc" : desc,
+      "price" : price,
+      "color" : color,
+      "image" : image,
+
+    };
 }
 
 final products = [

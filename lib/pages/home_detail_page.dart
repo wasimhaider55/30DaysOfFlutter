@@ -12,7 +12,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: ButtonBar(
         alignment: MainAxisAlignment.spaceBetween,
         buttonPadding: EdgeInsets.zero,
@@ -25,8 +27,8 @@ class HomeDetailPage extends StatelessWidget {
                   MaterialStateProperty.all(MyTheme.darkBluishColor),
               shape: MaterialStateProperty.all(StadiumBorder()),
             ),
-            child: "Buy".text.make(),
-          ).wh(100, 50),
+            child: "Add to Cart".text.make(),
+          ).wh(120, 50),
         ],
       ).p32(),
       backgroundColor: MyTheme.creamColor,
@@ -56,6 +58,11 @@ class HomeDetailPage extends StatelessWidget {
                         .make(),
                     catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                     10.heightBox,
+                    " a quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy doga quick brown fox jumps over the lazy dog a quick brown fox jumps over the lazy doga quick brown fox jumps over the lazy doga quick brown fox jumps over the lazy dog"
+                        .text
+                        .textStyle(context.captionStyle)
+                        .make()
+                        .p16(),
                   ],
                 ).py64(),
               ),

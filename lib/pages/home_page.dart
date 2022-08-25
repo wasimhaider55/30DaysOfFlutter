@@ -6,10 +6,9 @@ import 'package:flutter_application_1/widgets/themes.dart';
 import 'dart:convert';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter_application_1/models/catalog.dart';
-
 import '../utils/home_widgets/catalog_header.dart';
 import '../utils/home_widgets/catalog_list.dart';
-
+//   in day 21 just change dark theme and light theme 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
